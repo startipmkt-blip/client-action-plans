@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planos — Tork Motos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../../styles/base.css">
+  <style>
+    .plan-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:24px 0}
+    .plan-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:24px;text-decoration:none;color:var(--text);transition:border-color .2s,box-shadow .2s;display:flex;align-items:center;gap:16px}
+    .plan-card:hover{border-color:var(--accent);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+    .plan-icon{width:48px;height:48px;background:var(--accent-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+    .plan-info h3{margin:0 0 4px;font-family:var(--body);font-weight:600;font-size:1rem;color:var(--text)}
+    .plan-info span{font-size:.85rem;color:var(--text-muted)}
+    .empty{text-align:center;padding:40px 20px;color:var(--text-muted);font-size:.95rem}
+    .back-link{display:inline-block;margin-top:32px;font-size:.88rem;color:var(--text-muted);text-decoration:none}
+    .back-link:hover{color:var(--accent)}
+  </style>
+</head>
+<body>
+<div class="header-bar">
+  <p class="date">Startip Agência de Marketing</p>
+  <h1>Tork Motos</h1>
+  <p class="subtitle">Selecione o plano de ação</p>
+</div>
+<div class="plan-grid">
+  <p class="empty">Nenhum plano disponível ainda. Em breve!</p>
+</div>
+<a class="back-link" href="../../">← Voltar para lista de clientes</a>
+</body>
+</html>
