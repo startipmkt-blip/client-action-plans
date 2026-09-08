@@ -1,0 +1,8 @@
+{
+  "name": "client-action-plans",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "new-client": "node scripts/new-client.js"
+  }
+}
