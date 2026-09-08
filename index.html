@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startip — Planos de Ação</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles/base.css">
+  <style>
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .client-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .client-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .client-card h3 {
+      margin: 0 0 4px;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .client-card span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+<div class="header-bar">
+  <p class="date">Startip Agência de Marketing</p>
+  <h1>Planos de Ação</h1>
+  <p class="subtitle">Selecione o cliente para acessar o plano</p>
+</div>
+
+<div class="client-grid">
+  <a class="client-card" href="clientes/layfe-imports/"><h3>Layfe Imports</h3><span>Tráfego Pago · Social Media</span></a>
+  <a class="client-card" href="clientes/bg-gestao-contabil/"><h3>BG - Gestão Contábil</h3><span>Social Media · GMN</span></a>
+  <a class="client-card" href="clientes/creative-eventos/"><h3>Creative Eventos</h3><span>Social Media</span></a>
+  <a class="client-card" href="clientes/igotup/"><h3>iGotUp</h3><span>Tráfego Pago · Social Media · GMN</span></a>
+  <a class="client-card" href="clientes/netconnect/"><h3>NetConnect</h3><span>Tráfego Pago</span></a>
+  <a class="client-card" href="clientes/lg/"><h3>LG</h3><span>Tráfego Pago · Social Media</span></a>
+  <a class="client-card" href="clientes/ajs/"><h3>AJS</h3><span>Social Media</span></a>
+  <a class="client-card" href="clientes/cell-quality/"><h3>Cell Quality</h3><span>Tráfego Pago · Social Media</span></a>
+  <a class="client-card" href="clientes/xm-gravatai/"><h3>XM Gravataí</h3><span>Tráfego Pago</span></a>
+  <a class="client-card" href="clientes/4newtax/"><h3>4newtax</h3><span>Tráfego Pago</span></a>
+  <a class="client-card" href="clientes/funeraria-carvalho/"><h3>Funerária Carvalho</h3><span>Social Media</span></a>
+  <a class="client-card" href="clientes/tork-motos/"><h3>Tork Motos</h3><span>Tráfego Pago</span></a>
+  <a class="client-card" href="clientes/mariah-ozonioterapia/"><h3>Mariah - Ozonioterapia</h3><span>Tráfego Pago</span></a>
+  <a class="client-card" href="clientes/casa-mundi/"><h3>Casa Mundi - Calçados</h3><span>Tráfego Pago</span></a>
+  <a class="client-card" href="clientes/casas-paranaense/"><h3>Casas Paranaense</h3><span>Tráfego Pago · Social Media · GMN</span></a>
+  <a class="client-card" href="clientes/matcheria/"><h3>Matchêria</h3><span>Tráfego Pago · Social Media</span></a>
+  <a class="client-card" href="clientes/jose-chaveiro/"><h3>José - Chaveiro</h3><span>Social Media</span></a>
+</div>
+
+</body>
+</html>

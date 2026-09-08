@@ -1,0 +1,270 @@
+:root {
+  --bg: #F4F7F5;
+  --surface: #FFFFFF;
+  --surface-alt: #EAF0EC;
+  --text: #1A2E23;
+  --text-muted: #5A7065;
+  --accent: #2D6A4F;
+  --accent-light: #D4E8DC;
+  --highlight: #D4883E;
+  --highlight-light: #FFF3E4;
+  --alert: #C0504D;
+  --alert-light: #FCEAEA;
+  --copy-bg: #F7FAF8;
+  --copy-border: #B8D4C4;
+  --border: #D0DDD5;
+  --display: 'DM Serif Display', Georgia, serif;
+  --body: 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1A14;
+    --surface: #1A2B21;
+    --surface-alt: #213529;
+    --text: #E2EDE7;
+    --text-muted: #8FA99A;
+    --accent: #5CB88A;
+    --accent-light: #1E3D2D;
+    --highlight: #E0A054;
+    --highlight-light: #2D2418;
+    --alert: #E07070;
+    --alert-light: #2D1A1A;
+    --copy-bg: #1A2B21;
+    --copy-border: #3A5E48;
+    --border: #2E4538;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0F1A14;
+  --surface: #1A2B21;
+  --surface-alt: #213529;
+  --text: #E2EDE7;
+  --text-muted: #8FA99A;
+  --accent: #5CB88A;
+  --accent-light: #1E3D2D;
+  --highlight: #E0A054;
+  --highlight-light: #2D2418;
+  --alert: #E07070;
+  --alert-light: #2D1A1A;
+  --copy-bg: #1A2B21;
+  --copy-border: #3A5E48;
+  --border: #2E4538;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+h1, h2, h3 { font-family: var(--display); font-weight: 400; }
+h1 { font-size: 2.2rem; line-height: 1.2; margin: 0 0 8px; color: var(--accent); }
+h2 { font-size: 1.5rem; line-height: 1.3; margin: 56px 0 20px; color: var(--text); border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
+h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--accent); }
+h2:first-of-type { margin-top: 40px; }
+p { margin: 12px 0; }
+
+.subtitle { color: var(--text-muted); font-size: 0.95rem; margin: 0 0 32px; }
+.date { font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+
+.header-bar {
+  background: var(--accent);
+  color: #fff;
+  padding: 24px 28px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.header-bar h1 { color: #fff; margin: 0; }
+.header-bar .subtitle { color: rgba(255,255,255,0.8); margin: 6px 0 0; }
+
+.msg-template {
+  background: var(--copy-bg);
+  border: 1px solid var(--copy-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  position: relative;
+  white-space: pre-wrap;
+}
+.msg-template .tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.msg-template .copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--body);
+  transition: opacity 0.2s;
+}
+.msg-template .copy-btn:hover { opacity: 0.85; }
+
+.alert-box {
+  background: var(--alert-light);
+  border-left: 3px solid var(--alert);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+.alert-box strong { color: var(--alert); }
+
+.tip-box {
+  background: var(--highlight-light);
+  border-left: 3px solid var(--highlight);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+.tip-box strong { color: var(--highlight); }
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.checklist li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before {
+  content: '○';
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  color: var(--accent);
+  font-size: 1rem;
+}
+.checklist li.done::before {
+  content: '●';
+  color: var(--accent);
+}
+.checklist li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+  list-style: none;
+  padding: 0;
+}
+.tag-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+}
+.tag-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.timeline li {
+  position: relative;
+  padding: 0 0 28px 40px;
+}
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before {
+  content: attr(data-day);
+  position: absolute;
+  left: 0; top: 0;
+  width: 28px; height: 28px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.timeline li::after {
+  content: '';
+  position: absolute;
+  left: 13px; top: 32px; bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.timeline li:last-child::after { display: none; }
+.timeline li strong { display: block; margin-bottom: 4px; }
+
+.roteiro-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 20px 20px 56px;
+  margin: 16px 0;
+  counter-increment: roteiro;
+  position: relative;
+}
+.roteiro-step::before {
+  content: counter(roteiro);
+  position: absolute;
+  left: 18px; top: 18px;
+  width: 26px; height: 26px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--display);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.roteiro-step h4 { margin: 0 0 6px; font-size: 0.95rem; font-weight: 600; }
+.roteiro-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
+
+section { counter-reset: roteiro; }
+
+@media (max-width: 480px) {
+  body { padding: 24px 16px 60px; font-size: 14px; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  .header-bar { padding: 18px 20px; }
+}
